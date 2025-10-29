@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; background: #f7f7f9; color: #24292e; }
+.container { max-width: 960px; margin: 0 auto; padding: 16px; }
+
+.navbar { background: #0d6efd; color: #fff; }
+.navbar .brand { color: #fff; font-weight: 700; text-decoration: none; }
+.navbar .links a { color: #fff; margin-left: 16px; text-decoration: none; }
+
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+
+.table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e6e6e6; }
+.table th, .table td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+.table thead th { background: #f3f6f9; text-align: left; }
+.table .right { text-align: right; }
+
+.form { background: #fff; border: 1px solid #e6e6e6; padding: 16px; border-radius: 6px; }
+.form label { display: block; margin-bottom: 12px; font-weight: 600; }
+.form input[type="text"], .form input[type="number"], .form input[type="date"], .form select { width: 100%; padding: 8px 10px; border: 1px solid #cfd7df; border-radius: 4px; margin-top: 6px; }
+.form .actions { display: flex; gap: 8px; }
+
+.inline-form { display: flex; align-items: flex-end; gap: 8px; margin-bottom: 16px; }
+.inline-form label { margin: 0; }
+
+.filters { display: flex; gap: 12px; align-items: flex-end; margin-bottom: 12px; }
+.filters label { font-weight: 600; }
+
+.button { display: inline-block; background: #0d6efd; color: white; border: none; border-radius: 6px; padding: 8px 12px; text-decoration: none; cursor: pointer; }
+.button.secondary { background: #6c757d; }
+.button.danger { background: #dc3545; }
+.button.small { padding: 4px 8px; font-size: 0.9em; }
+
+ul.flashes { list-style: none; padding: 0; }
+.flash { padding: 10px 12px; border-radius: 6px; margin-bottom: 10px; }
+.flash.success { background: #d1e7dd; color: #0f5132; }
+.flash.error { background: #f8d7da; color: #842029; }
+
+.footer { color: #6c757d; font-size: 0.9em; }
+
+form.inline { display: inline; }

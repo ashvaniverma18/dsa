@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}{{ heading }} · Expense Tracker{% endblock %}
+{% block content %}
+  <h1>{{ heading }}</h1>
+  <form method="post" action="{{ action_url }}" class="form">
+    <label>
+      Description
+      <input type="text" name="description" value="{{ form.description or '' }}" required />
+    </label>
+    <label>
+      Amount
+      <input type="number" name="amount" step="0.01" min="0" value="{{ form.amount or '' }}" required />
+    </label>
+    <label>
+      Date
+      <input type="date" name="date" value="{{ form.date or '' }}" required />
+    </label>
+    <label>
+      Category
+      <select name="category_id">
+        <option value="">Uncategorized</option>
+        {% for c in categories %}
+          <option value="{{ c.id }}" {% if form.category_id==c.id %}selected{% endif %}>{{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <div class="actions">
+      <button class="button" type="submit">Save</button>
+      <a class="button secondary" href="{{ url_for('main.expenses') }}">Cancel</a>
+    </div>
+  </form>
+{% endblock %}
